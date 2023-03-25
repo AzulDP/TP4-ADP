@@ -19,23 +19,35 @@ let account = {
     saldo: '0',
     
     ingresar: (cantidad)=> {
-        document.write(`<p>El saldo de la cuenta es ${cantidad}</p>`);
+        document.write(`<p>Usted acaba de ingresar $${cantidad}</p>`);
     },
     extraer: (cantidad)=> {
-        document.write(`<p> El saldo de la cuenta es ${cantidad}</p>`);
+        document.write(`<p> Usted acaba de extraer $${cantidad}</p>`);
     },
-    informar: (cantidad) => {
-        document.write(`<p> El saldo de la cuenta es ${cantidad}</p>`);
+    informar: () => {
+        // let nuevoSaldo = function {
+        //     if (this.saldo =< this,ingresar){
+        //         math.floor(this.ingresar - this.extraer)
+        //     } else 
+        // }
+        // document.write(`<p> El saldo de la cuenta es $${nuevoSaldo}</p>`);
     }
 }
 
 console.log(account)
+document.write(`<h4>Detalles de la cuenta</h4>`)
 document.write(`<p> El titular de la cuenta es ${account.titular}</p>`);
-document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
+document.write(`<h4>Estado de la cuenta</h4>`)
+document.write(`<p> El saldo inicial de la cuenta es ${account.saldo}</p>`);
 
-ingresar("100");
-account.ingresar();
-document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
-document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
-extraer("50");
-document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
+
+document.write(`<h4>Ultimas transacciones</h4>`)
+
+document.write(`<h5>Ingresos</h5>`)
+account.ingresar("100");
+
+document.write(`<h5>Extracciones</h5>`)
+account.extraer("50");
+
+document.write(`<h4>Estado acutal</h4>`)
+account.informar();
