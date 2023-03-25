@@ -13,3 +13,29 @@ Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y vo
 
  */
 
+
+let account = {
+    titular: 'Alex',
+    saldo: '0',
+    
+    ingresar: (cantidad)=> {
+        document.write(`<p>El saldo de la cuenta es ${cantidad}</p>`);
+    },
+    extraer: (cantidad)=> {
+        document.write(`<p> El saldo de la cuenta es ${cantidad}</p>`);
+    },
+    informar: (cantidad) => {
+        document.write(`<p> El saldo de la cuenta es ${cantidad}</p>`);
+    }
+}
+
+console.log(account)
+document.write(`<p> El titular de la cuenta es ${account.titular}</p>`);
+document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
+
+ingresar("100");
+account.ingresar();
+document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
+document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
+extraer("50");
+document.write(`<p> El saldo de la cuenta es ${account.saldo}</p>`);
