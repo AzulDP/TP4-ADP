@@ -20,6 +20,9 @@ let calculadora = {
     }
 }
 
+// mostrarOperacion = function () {
+
+// }
 calculadora.sumar(3,4);
 document.write(`<br></br>`);
 calculadora.sumar(6,49);
