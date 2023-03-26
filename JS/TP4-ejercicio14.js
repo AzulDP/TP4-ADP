@@ -66,7 +66,6 @@ let listaProductos = [
   { nombreProducto: "Agua micellar", precio: 2890, categoria: "Limpieza" },
 ];
 
-dibujarTabla = () => {
   document.write(`<table>
     <thead>
     <tr>
@@ -88,7 +87,9 @@ dibujarTabla = () => {
 
   document.write(`</tbody>
 </table>`);
-};
+document.write(`<br>`)
+document.write(`<br>`)
+// };
 
 // /*
 // // filtrar el arreglo de productos por ‘Protectores solares' y mostrar la tabla filtrada.
@@ -97,19 +98,47 @@ dibujarTabla = () => {
 // */
 
 let listaProtectoresSolares = listaProductos.filter((producto) =>
-  producto.categoria.includes("Protector solar")
+producto.categoria.includes("Protector solar")
 );
 
 // // mostrar tabla filtrada
 
 console.log(listaProtectoresSolares);
 
+document.write(`<h4>Producto buscado:</h4>`)
+document.write(`<table>
+<thead>
+<tr>
+<th>Producto</th>
+<th>Categoría</th> 
+<th>Precio</th>
+</tr>
+</thead>
+<tbody>`);
+
+listaProtectoresSolares.map((producto) =>
+document.write(`
+<tr>
+<td>${producto.nombreProducto}</td>
+<td>${producto.categoria}</td>
+<td>${producto.precio}</td>
+</tr>`)
+);
+
+document.write(`</tbody>
+</table>`);
+
+document.write(`<br>`)
+
 let serum = listaProductos.find(producto => producto.nombreProducto.includes("Sérum"));
 console.log(serum);
+document.write(`<h4>Producto buscado:</h4>`)
 document.write(`<p>Producto buscado: ${serum.nombreProducto}</p>`);
 
+document.write(`<br>`)
 let bruma = listaProductos.find(producto => producto.nombreProducto.includes("Bruma"));
 console.log(bruma);
+document.write(`<h4>Producto buscado:</h4>`)
 document.write(
   `<p>Producto buscado: ${bruma === undefined ? "No encontramos el producto buscado" : "Encontramos el producto buscado"
 }</p>`
