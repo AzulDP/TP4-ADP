@@ -8,7 +8,7 @@ En este trabajo práctico practico ejercicios de objetos y clases.
 En una terminal ejecuta el siguiente comando: 
 
 ```
-git clone https://github.com/AzulDP/TrabajoPractico3-ADP.git
+git clone https://github.com/AzulDP/TP4-ADP.git
 ```
 
 ## Autora
