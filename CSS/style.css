@@ -2,6 +2,9 @@ body {
     background-color: #b0f4f2;;
 }
 
+hr {
+    border: black 1px solid;
+}
 table {
     border: 1px solid;
     text-align: left;
