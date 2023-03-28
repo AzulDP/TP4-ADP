@@ -10,14 +10,12 @@ objeto.apagar()          El auto se apagó
 
 */
 
-
 let car = {
     color: 'verde',
     marca: 'Peugeot',
     modelo: '206',
-    estado: 'encendido',
+    estado: true,
 
-// métodos
 start: ()=>{
     document.write(`<p>El ${car.marca} ${car['modelo']} ${car['color']} está encendido.</p>`)
 },

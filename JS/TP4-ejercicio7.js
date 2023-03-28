@@ -1,6 +1,5 @@
 /*
 Agenda telefónica - Dificultad:  🟢🟡🔴
-
 7- Nos piden realizar una agenda telefónica de contactos.
 
 Un contacto está definido por un nombre y un teléfono. Se considera que un contacto es igual a otro cuando sus nombres son iguales.

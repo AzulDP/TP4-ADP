@@ -89,19 +89,10 @@ let listaProductos = [
 </table>`);
 document.write(`<br>`)
 document.write(`<br>`)
-// };
-
-// /*
-// // filtrar el arreglo de productos por ‘Protectores solares' y mostrar la tabla filtrada.
-// // Buscar un producto serum y mostrarlo por pantalla,
-// // Buscar un producto 'Bruma’ y mostrar un mensaje adecuado para el usuario si el producto no existe en el array.
-// */
 
 let listaProtectoresSolares = listaProductos.filter((producto) =>
 producto.categoria.includes("Protector solar")
 );
-
-// // mostrar tabla filtrada
 
 console.log(listaProtectoresSolares);
 

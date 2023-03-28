@@ -20,7 +20,7 @@ let persona = {
         document.write(`<p>A ${this.nombre} le gusta ${this.hobbies}</p>`)
     },
     
-    // hobbies
+
     agregar: function (hobby) {
         this.hobbies.push(hobby);
         

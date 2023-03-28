@@ -13,55 +13,39 @@ Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y vo
 
  */
 
-let ingresos = [];
-let extracciones = [];
-let nuevoSaldo = [];
-
 let account = {
-    titular: 'Alex',
-    saldo: '0',
-    
-    ingresar: (cantidad)=> {
-        document.write(`<p>Usted acaba de ingresar $${cantidad}</p>`);
-    },
-    extraer: (cantidad)=> {
-        document.write(`<p> Usted acaba de extraer $${cantidad}</p>`);
-    },
-    informar: (cantidad) => {
-        document.write(`<p> El saldo actual de la cuenta es $${cantidad}</p>`);
-        
-        // this.saldo.push(this.ingresar);
-        // console.log(informar);
-        // this.saldo.push(this.extraer);
-        // console.log(informar);
-        //     let estadoCuenta = function {
-            //         if (this.saldo =< this.ingresar){
-                //             math.floor(this.ingresar - this.extraer)
-                //         } else 
-                //     }
-                //     document.write(`<p> El saldo de la cuenta es $${estadoCuenta}</p>`);
-            }
-        }
-        
-        console.log(account)
-        document.write(`<h4>Detalles de la cuenta</h4>`)
-        document.write(`<p> El titular de la cuenta es ${account.titular}</p>`);
-        document.write(`<h4>Estado de la cuenta</h4>`)
-        document.write(`<p> El saldo inicial de la cuenta es ${account.saldo}</p>`);
-        
-        
-        document.write(`<h4>Ultimas transacciones</h4>`)
-        
-        document.write(`<h5>Ingresos</h5>`)
-        account.ingresar("100");
-        ingresos.push = account.ingresar; 
-        
-        document.write(`<h5>Extracciones</h5>`)
-        account.extraer("50");
-        extracciones = account.extraer; 
+  titular: "Alex",
+  saldo: "0",
 
-        
-        
-        document.write(`<h4>Estado acutal</h4>`)
-        nuevoSaldo = Ingresos - Extracciones;
-account.informar(nuevoSaldo);
+  ingresar: function (cantidad) {
+    // let ingresos = parseFloat(prompt("Escriba la suma de dinero que quiere ingresar"))
+    let ingresos = cantidad;
+    this.saldo = this.saldo + ingresos;
+    document.write(`<p>Usted acaba de ingresar $${cantidad}</p>`);
+  },
+  extraer:  function (cantidad) {
+    // let extracciones =parseFloat(prompt("Escriba la suma de dinero que quiere extraer"))
+    let extracciones = cantidad;
+    this.saldo = this.saldo - extracciones;
+    document.write(`<p> Usted acaba de extraer $${cantidad}</p>`);
+  },
+  informar:  function () {
+    document.write(`<p> El saldo actual de la cuenta es $${this.saldo}</p>`);
+  },
+};
+console.log(account);
+document.write(`<h4>Detalles de la cuenta</h4>`);
+document.write(`<p> El titular de la cuenta es ${account.titular}</p>`);
+document.write(`<h4>Estado de la cuenta</h4>`);
+document.write(`<p> El saldo inicial de la cuenta es ${account.saldo}</p>`);
+
+document.write(`<h4>Ultimas transacciones</h4>`);
+
+document.write(`<h5>Ingresos</h5>`);
+account.ingresar("100");
+
+document.write(`<h5>Extracciones</h5>`);
+account.extraer("55");
+
+document.write(`<h4>Estado actual</h4>`);
+account.informar();
