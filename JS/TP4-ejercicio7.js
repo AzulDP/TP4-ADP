@@ -18,4 +18,6 @@ huecosLibres(): indica cuántos contactos más podemos ingresar.
 
 Crea un menú con opciones que serán seleccionadas por el usuario usando un prompt, las salidas de las operaciones seleccionadas por el usuario se pueden mostrar en pantalla y  por consola.
 
+hay q usar prompts aca
  */
+

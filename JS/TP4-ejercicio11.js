@@ -9,17 +9,18 @@ piedra 0 = a piedra 0 empata
 papel 1 = papel 1 empata
 tijera 2 = tijera 2 empata
 
+// }else if (isNaN(true)) {
+//   alert("Ingrese un número");
  */
 
 // pedir movimiento usuraio
 let userMove = parseInt(prompt("Seleccione un valor del cero al 2 donde: Piedra -> 0; Papel -> 1; Tijera -> 2"));
 
-// TODO validar el prompt
-// if (userMove === 0 || userMove === 1 || userMove === 2) {
-    
-// }else if (isNaN(number)) {
-//   alert("No es un número");
-// } 
+if (userMove === 0 || userMove === 1 || userMove === 2) {
+    // for (tiradas);
+} else (userMove > 2); {
+    alert("Ingrese un numero del 0 al 2");
+}
 
     // pedir movimiento computadora - aleatorio Math.random()
     let computerMove = Math.floor(Math.random() * 3) + 1;

@@ -11,21 +11,19 @@ Un método informar() que retorne la información del estado de la cuenta.
 
 Utiliza este objeto para mostrar la descripción, ingresar y extraer dinero y volver a mostrar la descripción del estado de la cuenta.
 
+let extracciones =parseFloat(prompt("Escriba la suma de dinero que quiere extraer"))
+// let ingresos = parseFloat(prompt("Escriba la suma de dinero que quiere ingresar"))
  */
 
 let account = {
   titular: "Alex",
   saldo: "0",
 
-  ingresar: function (cantidad) {
-    // let ingresos = parseFloat(prompt("Escriba la suma de dinero que quiere ingresar"))
-    let ingresos = cantidad;
+  ingresar: function () {
     this.saldo = this.saldo + ingresos;
     document.write(`<p>Usted acaba de ingresar $${cantidad}</p>`);
   },
-  extraer:  function (cantidad) {
-    // let extracciones =parseFloat(prompt("Escriba la suma de dinero que quiere extraer"))
-    let extracciones = cantidad;
+  extraer:  function () {
     this.saldo = this.saldo - extracciones;
     document.write(`<p> Usted acaba de extraer $${cantidad}</p>`);
   },
@@ -42,10 +40,10 @@ document.write(`<p> El saldo inicial de la cuenta es ${account.saldo}</p>`);
 document.write(`<h4>Ultimas transacciones</h4>`);
 
 document.write(`<h5>Ingresos</h5>`);
-account.ingresar("100");
+account.ingresar("");
 
 document.write(`<h5>Extracciones</h5>`);
-account.extraer("55");
+account.extraer("");
 
 document.write(`<h4>Estado actual</h4>`);
 account.informar();

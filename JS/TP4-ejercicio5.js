@@ -11,4 +11,7 @@ esMayorDeEdad: indica si es mayor de edad, devuelve un mensaje indicando que la 
 mostrarDatos: devuelve toda la información del objeto.
 generaDNI(): genera un número aleatorio de 8 cifras.
 
+La fecha actual resto anio de nacimiento  
+
  */
+
