@@ -10,12 +10,10 @@ class Productos {
     #nombre;
     #precio;
     #codigo;
-    #producto;
-    constructor (nombre, precio, codigo, producto){
+    constructor (nombre, precio, codigo){
         this.#nombre = nombre;
         this.#precio = precio;
         this.#codigo = codigo;
-        this.#producto = producto;
 }
 
 get getNombre (){
@@ -37,19 +35,12 @@ get getCodigo (){
 set setCodigo (nuevoCodigo){
 this.#codigo = nuevoCodigo;
 }
-get getProducto (){
-}
-set setProducto (nuevoProducto = []){
-    this.#producto = nuevoProducto;
-    nuevoProducto.forEach((nuevoProducto) => productos.push(new Productos('nombre', 'precio', 'codigo')));
-}
 
 ImprimeDatos(){
     document.write(`<ul>
 <li>Nombre: ${this.#nombre}</li>
 <li>Precio: ${this.#precio}</li>
 <li>Codigo: ${this.#codigo}</li>
-    <li>Codigo: ${this.#producto}</li>
     </ul>`)
 }
 }
@@ -64,14 +55,14 @@ producto1.ImprimeDatos();
 const producto2 = new Productos ("Gorra Argentina", "$10,000", "42022")
 
 console.log(producto2);
-// producto2.ImprimeDatos();
+producto2.ImprimeDatos();
 
 const producto3 = new Productos ("Pelota Argentina", "$13,000", "52022")
 
 console.log(producto3);
-// producto3.ImprimeDatos();
+producto3.ImprimeDatos();
 
-// const arrProductos = [producto1, producto2, producto3];
-// let productos = [];
-// arrProductos.forEach((arrProductos) => productos.push(new Productos('nombre', 'precio', 'codigo')));
-// producto1.Inprimedatos();
+const arrProductos = [producto1, producto2, producto3];
+let productos = [];
+arrProductos.forEach((arrProductos) => productos.push(new Productos('nombre', 'precio', 'codigo')));
+
