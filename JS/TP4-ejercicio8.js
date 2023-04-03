@@ -12,4 +12,25 @@ this.#nombre = nombre;
 this.#edad = edad;
 this.#profesion = profesion;
 }
+
+get getNombre (){
+    return this.#nombre;
+}
+set setNombre (nuevoNombre){
+this.#nombre = nuevoNombre;
+}
+get getEdad (){
+return this.#edad;
+}
+set setEdad (nuevaEdad){
+this.#edad =nuevaEdad;
+}
+get getProfesion (){
+return this.#profesion;
+}
+set setProfesion(nuevaProfesion){
+this.#profesion = nuevaProfesion;
+}
+
+
 }
