@@ -4,6 +4,7 @@ Por su parte los aviones tendrán las propiedades: nombre, capacidad, destino, l
 
 Crear un objeto de tipo aeropuerto llamado "Aeropuerto Internacional", crear 3 objetos aviones con diferentes destinos. Agregar los 3 aviones al aeropuerto, buscar un avión y usar el método abordar.
 
+TODO me falta agregarle los objetos aviones al aeropuerto; hacer funcionar el find; hacer la operacion para mostrar capacidad;
  */
 class Aeropuerto{
     #nombreAeropuerto
