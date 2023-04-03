@@ -10,7 +10,7 @@ class Aeropuerto{
     #listaAviones
     constructor (aeropuerto, avion){
         this.#nombreAeropuerto = aeropuerto;
-        this.#listaAviones= avion;
+        this.#listaAviones= "Boeing 747", "Airbus A320", "Boeing 737", "Airbus A340";
     }
 
     agregarAvion(){
@@ -18,10 +18,21 @@ class Aeropuerto{
 
     }
     buscarAvion(){
-
-    }
+    this.#listaAviones.map(avion=>document.write(`<li>${avion}</li>`))
+let listaDeAviones = this.#listaAviones.filter((avion)=>avion.includes("Boeing 777"));
+  console.log(listaDeAviones);
+  document.write(`<p>Producto buscado: ${listaDeAviones === undefined ? "no encontramos el producto buscado" : listaDeAviones}</p>`)
+  }
 }
 
+// let listaProtectoresSolares = listaProductos.filter((producto) =>
+// producto.categoria.includes("Protector solar")
+// );
+// document.write(`<p>Producto buscado: ${otroProducto === undefined ? "no encontramos el producto buscado" : otroProducto}</p>`)
+
+// console.log(listaProtectoresSolares);
+
+// document.write(`<h4>Producto buscado:</h4>`)
 class Avion extends Aeropuerto {
    
         #nombre;
