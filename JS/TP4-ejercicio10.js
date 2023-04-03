@@ -5,3 +5,38 @@ Por su parte los aviones tendrán las propiedades: nombre, capacidad, destino, l
 Crear un objeto de tipo aeropuerto llamado "Aeropuerto Internacional", crear 3 objetos aviones con diferentes destinos. Agregar los 3 aviones al aeropuerto, buscar un avión y usar el método abordar.
 
  */
+class Aeropuerto{
+    #nombreAeropuerto
+    #listaAviones
+    constructor (aeropuerto, avion){
+        this.#nombreAeropuerto = aeropuerto;
+        this.#listaAviones= avion;
+    }
+
+    agregarAvion(){
+       this.#listaAviones = Avion;
+
+    }
+    buscarAvion(){
+
+    }
+}
+
+class Avion extends Aeropuerto {
+   
+        #nombre;
+        #capacidad;
+        #destino;
+        #pasajeros;
+        constructor (nombre, capacidad, destino, pasajeros){
+            this.#nombre = nombre;
+            this.#capacidad = capacidad;
+            this.#destino = destino;
+            this.#pasajeros = pasajeros;
+        }
+
+        abordar(){
+
+        }
+    }
+    
