@@ -8,10 +8,24 @@ Crear un objeto de tipo aeropuerto llamado "Aeropuerto Internacional", crear 3 o
 class Aeropuerto{
     #nombreAeropuerto
     #listaAviones
-    constructor (aeropuerto, avion){
+    constructor (aeropuerto, avion = ("Boeing 747", "Airbus A320", "Boeing 737", "Airbus A340")){
         this.#nombreAeropuerto = aeropuerto;
-        this.#listaAviones= "Boeing 747", "Airbus A320", "Boeing 737", "Airbus A340";
+        this.#listaAviones= avion;
     }
+
+    get getAeropuerto (){
+        return this.#nombreAeropuerto;
+    }
+    set setAeropuerto (nuevoAeropuerto){
+        this.#nombreAeropuerto = nuevoAeropuerto;
+    }
+    get getListaAviones (){
+        return this.#listaAviones;
+    }
+    set setListaAviones (listaAviones){
+        this.#listaAviones = listaAviones;
+    }
+
 
     agregarAvion(){
        this.#listaAviones = Avion;
@@ -24,16 +38,8 @@ let listaDeAviones = this.#listaAviones.filter((avion)=>avion.includes("Boeing 7
   document.write(`<p>Producto buscado: ${listaDeAviones === undefined ? "no encontramos el producto buscado" : listaDeAviones}</p>`)
   }
 }
-
-// let listaProtectoresSolares = listaProductos.filter((producto) =>
-// producto.categoria.includes("Protector solar")
-// );
-// document.write(`<p>Producto buscado: ${otroProducto === undefined ? "no encontramos el producto buscado" : otroProducto}</p>`)
-
-// console.log(listaProtectoresSolares);
-
-// document.write(`<h4>Producto buscado:</h4>`)
-class Avion extends Aeropuerto {
+// extends Aeropuerto
+class Avion {
    
         #nombre;
         #capacidad;
@@ -51,3 +57,8 @@ class Avion extends Aeropuerto {
         }
     }
     
+const aeropuertoInternacional = new Aeropuerto ("London Heathrow");
+
+const avion1 = new Avion ("AirFrance", "300", "Paris", "300");
+const avion2 = new Avion ("AirFrance", "300", "Amsterdam", "300");
+const avion3 = new Avion ("AirFrance", "300", "Rio de Janeiro", "300");
