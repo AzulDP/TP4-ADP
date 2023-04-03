@@ -44,6 +44,14 @@ let listaDeAviones = this.#listaAviones.find((avion)=>this.#listaAviones.avion.i
   document.write(`<p>Producto buscado: ${listaDeAviones === undefined ? "no encontramos el producto buscado" : listaDeAviones}</p>`)
   }
 }
+
+// let serum = productos.find((producto)=>{return producto.includes("Sérum")})
+// let otroProducto = productos.find((producto)=>{return producto.includes("Bálsamo")})
+
+// document.write(`<p>Producto buscado: ${serum}</p>`)
+// document.write(`<p>Producto buscado: ${otroProducto === undefined ? "no encontramos el producto buscado" : otroProducto}</p>`)
+
+
 // extends Aeropuerto
 class Avion {
    
@@ -91,8 +99,10 @@ class Avion {
             </ul>`)
         }
 
-        abordar(){
-
+        abordar(nuevaCapacidad){
+if (nuevaCapacidad === this.#capacidad){
+    alert("El avion esta lleno")
+}
         }
     }
     
