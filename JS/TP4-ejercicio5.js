@@ -113,3 +113,4 @@ document.write(`Tu número de DNI es ${randomNumber}`);
 }
 }
 
+Persona.generaDNI();

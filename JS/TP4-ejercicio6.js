@@ -12,5 +12,5 @@ Crear sus respectivos métodos get y set correspondientes para cada propiedad. C
 
 Crear al menos 2 objetos libros y utilizar el método mostrarLibro();
 Por último, indicar cuál de los 2 objetos “libros” tiene más páginas.
-
  */
+
