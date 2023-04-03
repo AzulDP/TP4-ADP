@@ -33,14 +33,13 @@ mostrarInformacion(){
     </ul>`)
 }
 
-
     agregarAvion(){
        this.#listaAviones = Avion;
        
     }
     buscarAvion(){
-    this.#listaAviones.map(avion=>document.write(`<li>${avion}</li>`))
-let listaDeAviones = this.#listaAviones.filter((avion)=>avion.includes("Boeing 777"));
+        this.#listaAviones.map(avion=>document.write(`<li>${avion}</li>`));
+let listaDeAviones = this.#listaAviones.find((avion)=>this.#listaAviones.avion.includes(""));
   console.log(listaDeAviones);
   document.write(`<p>Producto buscado: ${listaDeAviones === undefined ? "no encontramos el producto buscado" : listaDeAviones}</p>`)
   }
@@ -98,7 +97,8 @@ class Avion {
     }
     
     console.log(Aeropuerto);
-const aeropuertoInternacional = new Aeropuerto ("London Heathrow");
+    const aeropuertoInternacional = new Aeropuerto ("London Heathrow");
+    console.log(aeropuertoInternacional);
 
 const avion1 = new Avion ("AirFrance", "300", "Paris", "300");
 console.log(avion1);
@@ -120,4 +120,6 @@ document.write(`<ul>
 <li>${avion3.getCapacidad}</li>
 <li>${avion3.getDestino}</li>
 <li>${avion3.getPasajeros}</li>
-</ul>`)
+</ul>`);
+
+aeropuertoInternacional.buscarAvion("Boeing 777");
