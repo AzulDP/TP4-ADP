@@ -26,10 +26,17 @@ class Aeropuerto{
         this.#listaAviones = listaAviones;
     }
 
+mostrarInformacion(){
+    document.write(`<ul>
+    <li>${this.#nombreAeropuerto}</li>
+    <li>${this.#listaAviones}</li>
+    </ul>`)
+}
+
 
     agregarAvion(){
        this.#listaAviones = Avion;
-
+       
     }
     buscarAvion(){
     this.#listaAviones.map(avion=>document.write(`<li>${avion}</li>`))
@@ -51,14 +58,66 @@ class Avion {
             this.#destino = destino;
             this.#pasajeros = pasajeros;
         }
+        get getNombre (){
+            return this.#nombre;
+        }
+        set setNombre (nuevoNombre){
+            this.#nombre = nuevoNombre;
+        }
+        get getCapacidad (){
+            return this.#capacidad;
+        }
+        set setCapacidad (nuevaCapacidad){
+            this.#capacidad = capacidad;
+        }
+        get getDestino (){
+            return this.#destino;
+        }
+        set setDestino (nuevoDestino){
+            this.#destino = nuevoDestino;
+        }
+        get getPasajeros (){
+            return this.#pasajeros;
+        }
+        set setPasajeros (nuevoPasajeros){
+            this.#pasajeros = nuevoPasajeros;
+        }
+        
+        mostrarInformacion(){
+            document.write(`<ul>
+            <li>${this.#nombre}</li>
+            <li>${this.#capacidad}</li>
+            <li>${this.#destino}</li>
+            <li>${this.#pasajeros}</li>
+            </ul>`)
+        }
 
         abordar(){
 
         }
     }
     
+    console.log(Aeropuerto);
 const aeropuertoInternacional = new Aeropuerto ("London Heathrow");
 
 const avion1 = new Avion ("AirFrance", "300", "Paris", "300");
+console.log(avion1);
 const avion2 = new Avion ("AirFrance", "300", "Amsterdam", "300");
+console.log(avion2);
 const avion3 = new Avion ("AirFrance", "300", "Rio de Janeiro", "300");
+console.log(avion3);
+
+document.write(`<ul>
+<li>${avion1.getNombre}</li>
+<li>${avion1.getCapacidad}</li>
+<li>${avion1.getDestino}</li>
+<li>${avion1.getPasajeros}</li>
+<li>${avion2.getNombre}</li>
+<li>${avion2.getCapacidad}</li>
+<li>${avion2.getDestino}</li>
+<li>${avion2.getPasajeros}</li>
+<li>${avion3.getNombre}</li>
+<li>${avion3.getCapacidad}</li>
+<li>${avion3.getDestino}</li>
+<li>${avion3.getPasajeros}</li>
+</ul>`)
